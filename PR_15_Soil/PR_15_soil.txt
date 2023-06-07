@@ -1,6 +1,5 @@
 void setup()
 {
-    // Set the serial monitor baudrate to 9600
     Serial.begin(9600);
 }
  
