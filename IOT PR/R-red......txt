@@ -1,0 +1,65 @@
+char c;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  Serial.println("Enter character\n");
+  
+  while(Serial.available()==0) {}
+  
+  c=Serial.read();
+  if(c=='g')
+  {
+    Serial.println(c);
+    digitalWrite(11, HIGH);
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(11, LOW);
+    delay(1000); // Wait for 1000 millisecond(s)
+     Serial.println("It glows green bulb");
+  }
+  if(c=='b')
+  {
+    Serial.println(c);
+    digitalWrite(12, HIGH);
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(12, LOW);
+    delay(1000); // Wait for 1000 millisecond(s)
+     Serial.println("It glows blue bulb");
+  }
+  if(c=='r')
+  {
+    Serial.println(c);
+    digitalWrite(13, HIGH);
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(13, LOW);
+    delay(1000); // Wait for 1000 millisecond(s)
+     Serial.println("It glows red bulb");
+  }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

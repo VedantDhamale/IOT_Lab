@@ -1,0 +1,14 @@
+int num; 
+void setup() 
+{ 
+Serial.begin(9600); 
+} 
+void loop() 
+{ 
+ Serial.println("\n Enter the number");
+  while(Serial.available()==0){} 
+ num=Serial.parseInt(); 
+  num=num*num; 
+ Serial.print("Square is:"); 
+ Serial.print(num); 
+} 

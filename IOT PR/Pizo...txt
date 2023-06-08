@@ -1,0 +1,29 @@
+int i= 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(6, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  int sounds[10]={234,324,432,543,232,267,876,368,128,520};
+  if (digitalRead(A0) == HIGH)
+  {
+     digitalWrite(8,HIGH);
+     digitalWrite(9,LOW);
+     for(i=0;i<10;i++)  
+     {
+        tone(6,sounds[i],500);
+        delay(1000);
+     }
+     noTone(4);
+  } 
+  else
+  {
+    digitalWrite(9,HIGH);
+  }
+}

@@ -1,0 +1,16 @@
+// C++ code
+//
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int level;//variable to store ADC value(0 to 1023);
+  level = analogRead(0);//analogRead function return the 10 bit 
+  //integer(0 to 1023)
+  Serial.println("Analog Value: ");//Prient text in Serial monitor
+  Serial.println(level);//print analog value in serial monitor
+  delay(1000); // Wait for 1000 millisecond(s)
+}

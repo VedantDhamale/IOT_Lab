@@ -1,0 +1,34 @@
+// C++ code
+//
+int LED = 2;
+const int gas = 0;
+int A2pin = A0;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  float sensorValue,A2pin;
+  sensorValue = analogRead(A2pin);
+  if(sensorValue >= 200)
+  {
+    digitalWrite(LED,HIGH);
+    Serial.println(sensorValue);
+    Serial.println("SMOKE DETECTED !!");
+  }
+  
+  else
+  {
+    digitalWrite(LED,LOW);
+    Serial.println("Sensor Value: ");
+    Serial.println(sensorValue);
+  }
+  delay(1000); 
+}
+float getsensorValue(int pin)
+{
+  return (analogRead(pin));
+}

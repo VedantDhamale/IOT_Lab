@@ -1,0 +1,21 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(A3, INPUT);
+  pinMode(A4, INPUT);
+  pinMode(A5, INPUT);
+  pinMode(11, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(7, OUTPUT);
+}
+ 
+void loop()
+{
+  int x=analogRead(A5);
+  analogWrite(11,x);
+  int y=analogRead(A4);
+  analogWrite(9,y);
+  int z=analogRead(A3);
+  analogWrite(7,z);
+}

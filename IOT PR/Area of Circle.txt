@@ -1,0 +1,17 @@
+int rad;
+int Area;
+void setup() 
+{ 
+Serial.begin(9600); 
+} 
+void loop() 
+{ 
+ Serial.println("\n Enter the radius of circle");
+  while(Serial.available()==0){} 
+ rad=Serial.parseInt(); 
+  Area=3.14*rad*rad; 
+ Serial.print("Area of circle is:"); 
+ Serial.print(Area); 
+} 
+
+
